@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>我的技术与生活——小站首页 | Ethan_Blog</title>
+  <title>我的技术与生活——Git操作 | Ethan_Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="shortcut icon" href="/imgs/shortcut-icon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/css/public.css" />
@@ -16,7 +16,7 @@
 
   <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
   <script>
-    document.title = `我的技术与生活——小站首页`
+    document.title = `我的技术与生活——Git操作`
   </script>
 <meta name="generator" content="Hexo 7.3.0"></head>
 
@@ -344,156 +344,135 @@
     </div>
   </div>
 </div></div>
-      <div id="main-container" class="main-container"><link rel="stylesheet" href="/css/partial/archive.css" />
+      <div id="main-container" class="main-container">
 
 
+  <link rel="stylesheet" href="/css/partial/article.css" />
 
-    <link rel="stylesheet" href="/css/partial/index.css" />
-
-
-
-<div class="index">
-  <div class="index-left">
-    
-      <div class="index-article">
-        <!-- <img class="index-article--cover" src="/imgs/default-cover.webp" alt=""> -->
-        <div class="index-article--box">
-          <img class="index-article--cover" data-cover="imgs/default-cover.webp" alt="Git操作" />
-        </div>
-        <div class="index-article--content">
-          <a href="/2025/09/23/Git%E6%93%8D%E4%BD%9C/">Git操作 </a>
-          <div>
-            
+<div class="article-container">
+  <div class="article">
+    <h1 class="article-title">Git操作</h1>
+    <div class="article-info">
+      <div class="article-info--item">
+        <div class="article-info--info">
+          
+          <div class="article-info--categories">
+            <span>分类：</span>
             
           </div>
-          <div class="bg"></div>
-        </div>
-      </div>
-    
-      <div class="index-article">
-        <!-- <img class="index-article--cover" src="/imgs/default-cover.webp" alt=""> -->
-        <div class="index-article--box">
-          <img class="index-article--cover" data-cover="imgs/default-cover.webp" alt="测试之道" />
-        </div>
-        <div class="index-article--content">
-          <a href="/2025/09/20/%E6%B5%8B%E8%AF%95%E4%B9%8B%E9%81%93/">测试之道 </a>
-          <div>
-            
+          
+          
+          <div class="article-info--tags">
+            <span>标签：</span>
             
           </div>
-          <div class="bg"></div>
+          
+          <p class="article-info--date">日期：2025-09-23 16:10:01</p>
         </div>
+        <img src="/imgs/default-cover.webp" alt="" class="article-cover">
       </div>
+    </div>
+    <article class="article-content markdown-body">
+      <p>1.查看分支<br>1.1 查看本地分支<br>Git branch<br>Git branch -vv</p>
+<p>1.2 查看所有分支<br>Git branch -a</p>
+<p>2.创建分支<br>2.1 创建分支并切换到新分支<br>Git checkout -b  hotfix(新分支名)<br>2.2创建分支<br>Git branch 	新分支名<br>切换分支<br>Git checkout  新分支名</p>
+<p>3.删除分支<br>删除本地分支<br>Git  branch -d  分支名<br>强制删除分支<br>Git  branch -D  分支名<br>删除远程分支<br>Git push origin —delete  分支名</p>
+<ol start="4">
+<li><p>分支命名规范（最佳实践）<br>好的分支命名能让团队协作更顺畅：<br>分支类型	命名示例	用途<br>功能分支	feature&#x2F;user-authentication	新功能开发<br>修复分支	fix&#x2F;login-button-style	bug 修复<br>发布分支	release&#x2F;v1.2.0	版本发布准备<br>热修复分支	hotfix&#x2F;critical-security-fix	生产环境紧急修复</p>
+</li>
+<li><p>完整的创建工作流示例<br>bash</p>
+</li>
+</ol>
+<h1 id="1-确保你在主分支上（如-main-或-master）"><a href="#1-确保你在主分支上（如-main-或-master）" class="headerlink" title="1. 确保你在主分支上（如 main 或 master）"></a>1. 确保你在主分支上（如 main 或 master）</h1><p>git checkout main</p>
+<h1 id="2-拉取最新代码"><a href="#2-拉取最新代码" class="headerlink" title="2. 拉取最新代码"></a>2. 拉取最新代码</h1><p>git pull origin main</p>
+<h1 id="3-创建并切换到新功能分支"><a href="#3-创建并切换到新功能分支" class="headerlink" title="3. 创建并切换到新功能分支"></a>3. 创建并切换到新功能分支</h1><p>git checkout -b feature&#x2F;adding-search-function</p>
+<h1 id="4-在新分支上开发，添加修改"><a href="#4-在新分支上开发，添加修改" class="headerlink" title="4. 在新分支上开发，添加修改"></a>4. 在新分支上开发，添加修改</h1><p>echo “搜索功能代码” &gt; search.js<br>git add search.js<br>git commit -m “实现基础搜索功能”</p>
+<h1 id="5-将新分支推送到远程仓库"><a href="#5-将新分支推送到远程仓库" class="headerlink" title="5. 将新分支推送到远程仓库"></a>5. 将新分支推送到远程仓库</h1><p>git push -u origin feature&#x2F;adding-search-function</p>
+<ol start="6">
+<li>分支管理常用命令<br>bash</li>
+</ol>
+<h1 id="查看分支详情（包括与远程分支的关联）"><a href="#查看分支详情（包括与远程分支的关联）" class="headerlink" title="查看分支详情（包括与远程分支的关联）"></a>查看分支详情（包括与远程分支的关联）</h1><p>git branch -vv</p>
+<h1 id="删除本地分支（不能在要删除的分支上执行）"><a href="#删除本地分支（不能在要删除的分支上执行）" class="headerlink" title="删除本地分支（不能在要删除的分支上执行）"></a>删除本地分支（不能在要删除的分支上执行）</h1><p>git branch -d 分支名</p>
+<h1 id="强制删除分支（当分支未完全合并时）"><a href="#强制删除分支（当分支未完全合并时）" class="headerlink" title="强制删除分支（当分支未完全合并时）"></a>强制删除分支（当分支未完全合并时）</h1><p>git branch -D 分支名</p>
+<h1 id="删除远程分支"><a href="#删除远程分支" class="headerlink" title="删除远程分支"></a>删除远程分支</h1><p>git push origin –delete 分支名</p>
+<h1 id="重命名当前分支"><a href="#重命名当前分支" class="headerlink" title="重命名当前分支"></a>重命名当前分支</h1><p>git branch -m 新分支名</p>
+
+    </article>
+    
+    <div class="read-nums">
+      <!-- id 将作为查询条件 -->
+      <span id="2025/09/23/Git操作/" class="leancloud_visitors" data-flag-title="Your Article Title">
+        <em class="post-meta-item-text">浏览量</em>
+        <i class="leancloud-visitors-count"></i>
+      </span>
+    </div>
+    <div class="comments-intro">
+      <h2>评论区</h2>
+      <p>欢迎你留下宝贵的意见，昵称输入QQ号会显示QQ头像哦~</p>
+    </div>
+    <div id="vcomments" class="vcomments"></div>
     
   </div>
-  <div class="index-center">
-    
-      <div class="index-article">
-        <!-- <img class="index-article--cover" data-cover="" src="/imgs/default-cover.webp" alt=""> -->
-        <div class="index-article--box">
-          <img class="index-article--cover" data-cover="imgs/default-cover.webp" alt="new Test" />
-        </div>
-        <div class="index-article--content">
-          <a href="/2025/09/20/new-Test/">new Test </a>
-          <div>
-            
-            
-          </div>
-          <div class="bg"></div>
-        </div>
+  <div class="article-catelogue">
+    <div class="article-catelogue--wrapper">
+      <div class="catelogue catelogue-1">
+        <h3>目录</h3>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E7%A1%AE%E4%BF%9D%E4%BD%A0%E5%9C%A8%E4%B8%BB%E5%88%86%E6%94%AF%E4%B8%8A%EF%BC%88%E5%A6%82-main-%E6%88%96-master%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">1. 确保你在主分支上（如 main 或 master）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E6%8B%89%E5%8F%96%E6%9C%80%E6%96%B0%E4%BB%A3%E7%A0%81"><span class="toc-number">2.</span> <span class="toc-text">2. 拉取最新代码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E5%88%9B%E5%BB%BA%E5%B9%B6%E5%88%87%E6%8D%A2%E5%88%B0%E6%96%B0%E5%8A%9F%E8%83%BD%E5%88%86%E6%94%AF"><span class="toc-number">3.</span> <span class="toc-text">3. 创建并切换到新功能分支</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-%E5%9C%A8%E6%96%B0%E5%88%86%E6%94%AF%E4%B8%8A%E5%BC%80%E5%8F%91%EF%BC%8C%E6%B7%BB%E5%8A%A0%E4%BF%AE%E6%94%B9"><span class="toc-number">4.</span> <span class="toc-text">4. 在新分支上开发，添加修改</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-%E5%B0%86%E6%96%B0%E5%88%86%E6%94%AF%E6%8E%A8%E9%80%81%E5%88%B0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-number">5.</span> <span class="toc-text">5. 将新分支推送到远程仓库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E5%88%86%E6%94%AF%E8%AF%A6%E6%83%85%EF%BC%88%E5%8C%85%E6%8B%AC%E4%B8%8E%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF%E7%9A%84%E5%85%B3%E8%81%94%EF%BC%89"><span class="toc-number">6.</span> <span class="toc-text">查看分支详情（包括与远程分支的关联）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%EF%BC%88%E4%B8%8D%E8%83%BD%E5%9C%A8%E8%A6%81%E5%88%A0%E9%99%A4%E7%9A%84%E5%88%86%E6%94%AF%E4%B8%8A%E6%89%A7%E8%A1%8C%EF%BC%89"><span class="toc-number">7.</span> <span class="toc-text">删除本地分支（不能在要删除的分支上执行）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%BA%E5%88%B6%E5%88%A0%E9%99%A4%E5%88%86%E6%94%AF%EF%BC%88%E5%BD%93%E5%88%86%E6%94%AF%E6%9C%AA%E5%AE%8C%E5%85%A8%E5%90%88%E5%B9%B6%E6%97%B6%EF%BC%89"><span class="toc-number">8.</span> <span class="toc-text">强制删除分支（当分支未完全合并时）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF"><span class="toc-number">9.</span> <span class="toc-text">删除远程分支</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%87%8D%E5%91%BD%E5%90%8D%E5%BD%93%E5%89%8D%E5%88%86%E6%94%AF"><span class="toc-number">10.</span> <span class="toc-text">重命名当前分支</span></a></li></ol>
       </div>
-    
-      <div class="index-article">
-        <!-- <img class="index-article--cover" data-cover="" src="/imgs/default-cover.webp" alt=""> -->
-        <div class="index-article--box">
-          <img class="index-article--cover" data-cover="imgs/default-cover.webp" alt="Hello World" />
-        </div>
-        <div class="index-article--content">
-          <a href="/2025/09/19/hello-world/">Hello World </a>
-          <div>
-            
-            
-          </div>
-          <div class="bg"></div>
-        </div>
-      </div>
-    
-  </div>
-  <div class="index-right">
-    <div class="index-right-wrapper">
       
+        <div class="catelogue catelogue-2">
+           
+          
+            <p>
+              <span>下一篇</span>
+              <a href="/2025/09/20/new-Test/">new Test</a>
+            </p>
+          
+        </div>
       
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/09/">2025年09月</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 </div>
 
 
 <script>
-  var allImgBoxs = document.querySelectorAll('.index-article--box');
-  var windowHeight = window.innerHeight;
-  var boxs = Array.from(allImgBoxs);
-  var timer = null;
-  boxs.forEach((box, idx) => {
-    if (!window.loadImageSet || !window.loadImageSet.includes(idx)) {
-      box.classList.add('img-loading');
-    } else {
-      const imgDom = box.querySelector('img');
-      imgDom.src = imgDom.dataset.cover;
-    }
-  });
+  // var定义，避免pjax重新进来造成的重复声明错误
+  var config = JSON.parse('{"enable":true,"appId":"Pf8zCXGEH1qsprnWfikVVujL-gzGzoHsz","appKey":"qOqoiUHhH1TGtLRUYURkLRQX","placeholder":"请留下你宝贵的意见吧~","meta":["nick"],"recordIP":true,"visitor":true,"enableQQ":true}')
+  new Valine({
+    el: '#vcomments',
+    appId: config.appId,
+    appKey: config.appKey,
+    placeholder: config.placeholder,
+    meta: config.meta,
+    recordIP: config.recordIP,
+    visitor: config.visitor,
+    enableQQ: config.enableQQ,
+    path: '2025/09/23/Git操作/'
+  })
+</script>
 
-  function scrollFn() {
-    if (timer) {
-      return;
-    }
-    timer = setTimeout(() => {
-      loadImage();
-      timer = null;
-    }, 100)
-  }
 
-  setTimeout(() => {
-    loadImage();
-  }, 100);
-  if (!window.loadedImage) {
-    document.addEventListener('scroll', scrollFn);
-  }
-
-  function loadImage() {
-    const doc = document.documentElement;
-    const scrollTop = doc.scrollTop;
-    if (boxs.every(box => box.loadedImage)) {
-      document.removeEventListener('scroll', scrollFn);
-      window.loadedImage = 1;
-      return;
-    }
-    boxs.forEach((box, idx) => {
-      if (box.loadedImage) {
-        return;
-      }
-      if (box.getBoundingClientRect().top < windowHeight) {
-        const imgDom = box.querySelector('img');
-        imgDom.src = imgDom.dataset.cover;
-        // 图片成功加载
-        imgDom.onload = () => {
-          box.classList.remove('img-loading');
-          box.loadedImage = true;
-          if (!window.loadImageSet) {
-            window.loadImageSet = [];
-          }
-          window.loadImageSet.push(idx);
-        }
-        // 图片加载失败
-        imgDom.onerror = () => {
-          box.classList.remove('img-loading');
-          box.classList.add('img-error');
-          imgDom.src = '/imgs/404.png';
-        }
-      }
-    });
-  }
+<script>
+  $(document).on('pjax:complete', function() {
+    const tocs = document.querySelector('.toc')
+    const links = tocs ? tocs.querySelectorAll('a') : []
+    links.forEach(link => {
+      link.addEventListener('click', e => {
+        const href = decodeURIComponent(e.href)
+        href.search(/#(.*)/)
+        const id = RegExp.$1
+        const target = document.querySelector('#' + id)
+        const top = target.offsetTop
+        document.documentElement.scrollTo({
+          top: top - 100,
+          behavior: 'smooth'
+        })
+        e.preventDefault()
+      })
+    })
+  })
 </script> 
+
 </div>
       <div class="main-right-wrapper"><div class="main-right">
   <div class="main-right--board">

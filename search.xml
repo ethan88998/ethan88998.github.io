@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>Git操作</title>
+      <link href="/2025/09/23/Git%E6%93%8D%E4%BD%9C/"/>
+      <url>/2025/09/23/Git%E6%93%8D%E4%BD%9C/</url>
+      
+        <content type="html"><![CDATA[<p>1.查看分支<br>1.1 查看本地分支<br>Git branch<br>Git branch -vv</p><p>1.2 查看所有分支<br>Git branch -a</p><p>2.创建分支<br>2.1 创建分支并切换到新分支<br>Git checkout -b  hotfix(新分支名)<br>2.2创建分支<br>Git branch 新分支名<br>切换分支<br>Git checkout  新分支名</p><p>3.删除分支<br>删除本地分支<br>Git  branch -d  分支名<br>强制删除分支<br>Git  branch -D  分支名<br>删除远程分支<br>Git push origin —delete  分支名</p><ol start="4"><li><p>分支命名规范（最佳实践）<br>好的分支命名能让团队协作更顺畅：<br>分支类型命名示例用途<br>功能分支feature&#x2F;user-authentication新功能开发<br>修复分支fix&#x2F;login-button-stylebug 修复<br>发布分支release&#x2F;v1.2.0版本发布准备<br>热修复分支hotfix&#x2F;critical-security-fix生产环境紧急修复</p></li><li><p>完整的创建工作流示例<br>bash</p></li></ol><h1 id="1-确保你在主分支上（如-main-或-master）"><a href="#1-确保你在主分支上（如-main-或-master）" class="headerlink" title="1. 确保你在主分支上（如 main 或 master）"></a>1. 确保你在主分支上（如 main 或 master）</h1><p>git checkout main</p><h1 id="2-拉取最新代码"><a href="#2-拉取最新代码" class="headerlink" title="2. 拉取最新代码"></a>2. 拉取最新代码</h1><p>git pull origin main</p><h1 id="3-创建并切换到新功能分支"><a href="#3-创建并切换到新功能分支" class="headerlink" title="3. 创建并切换到新功能分支"></a>3. 创建并切换到新功能分支</h1><p>git checkout -b feature&#x2F;adding-search-function</p><h1 id="4-在新分支上开发，添加修改"><a href="#4-在新分支上开发，添加修改" class="headerlink" title="4. 在新分支上开发，添加修改"></a>4. 在新分支上开发，添加修改</h1><p>echo “搜索功能代码” &gt; search.js<br>git add search.js<br>git commit -m “实现基础搜索功能”</p><h1 id="5-将新分支推送到远程仓库"><a href="#5-将新分支推送到远程仓库" class="headerlink" title="5. 将新分支推送到远程仓库"></a>5. 将新分支推送到远程仓库</h1><p>git push -u origin feature&#x2F;adding-search-function</p><ol start="6"><li>分支管理常用命令<br>bash</li></ol><h1 id="查看分支详情（包括与远程分支的关联）"><a href="#查看分支详情（包括与远程分支的关联）" class="headerlink" title="查看分支详情（包括与远程分支的关联）"></a>查看分支详情（包括与远程分支的关联）</h1><p>git branch -vv</p><h1 id="删除本地分支（不能在要删除的分支上执行）"><a href="#删除本地分支（不能在要删除的分支上执行）" class="headerlink" title="删除本地分支（不能在要删除的分支上执行）"></a>删除本地分支（不能在要删除的分支上执行）</h1><p>git branch -d 分支名</p><h1 id="强制删除分支（当分支未完全合并时）"><a href="#强制删除分支（当分支未完全合并时）" class="headerlink" title="强制删除分支（当分支未完全合并时）"></a>强制删除分支（当分支未完全合并时）</h1><p>git branch -D 分支名</p><h1 id="删除远程分支"><a href="#删除远程分支" class="headerlink" title="删除远程分支"></a>删除远程分支</h1><p>git push origin –delete 分支名</p><h1 id="重命名当前分支"><a href="#重命名当前分支" class="headerlink" title="重命名当前分支"></a>重命名当前分支</h1><p>git branch -m 新分支名</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>new Test</title>
       <link href="/2025/09/20/new-Test/"/>
       <url>/2025/09/20/new-Test/</url>
